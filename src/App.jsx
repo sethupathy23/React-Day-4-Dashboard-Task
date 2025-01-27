@@ -1,36 +1,31 @@
+import LoginPage from "./login";
+import Home from "./Home";
 
-import './App.css'
-import Sidebar from './sidebar'
-import Navbar from './navbar'
-import Widgets from './widgets'
-import { Illustrations } from './illustration'
-import { ColorsList } from './ColorBar'
-
+// import Weather from "./weather";
+import Imagegen from "../imagegen"; // Ensure the file path is correct
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+// import Weather from "../weather";
+// import Weather from "../weatherapp";
+// import Weatherapp from "../weatherapp";
+import Weatherapp from "../weatherapp";
+import { TicTacToe } from "../tictactoe";
 
 function App() {
- return (
- <div className='app'>
-      <div className='title'>
-        <Sidebar />
-      </div>
-    <div className='home'>
-      <Navbar />
-      <div className='dashboardtitle'> Dashboard
-      </div>
-      <div className='widgets'>
-        <Widgets />
-      </div>
-      <div className='illustrationsapp'>
-        <Illustrations />
-      </div>
-    <div className='projects'>
-        <ColorsList />
-      </div>
-   </div>
- </div>
-  )
+  return (
+    <div className="app">
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/weather" element={<Weatherapp />} />
+        <Route path="/imagegenrator" element={<Imagegen />} />
+        <Route path="/tictactoe" element={<TicTacToe />} />
+        <Route path="/" element={<LoginPage />} />
+        {/* <Route path="/dash" element={<Widgets />} /> */}
+        {/* <Route path="about" element={<About />} /> */}
+      </Routes>
+      <div>{/* <LoginPage /> */}</div>
+    </div>
+  );
 }
 
-export default App
-
-
+export default App;

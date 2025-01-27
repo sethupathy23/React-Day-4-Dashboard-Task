@@ -1,0 +1,29 @@
+
+.game-box{
+    border: 1px solid purple;
+    height: 160px;
+    width: 160px;
+    font-size: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .game-box:hover{
+    background-color: hsl(0deg 0% 0% / 6%);
+  }
+  
+  .game-box-order{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    width: min-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .tic-tac-toe{
+    text-align: center;
+  }
+  .bt{
+    margin-top:10px;
+  }
